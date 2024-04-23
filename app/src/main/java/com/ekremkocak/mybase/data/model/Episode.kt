@@ -25,7 +25,7 @@ import androidx.room.PrimaryKey
 import java.time.Duration
 import java.time.OffsetDateTime
 
-@Entity(
+@Entity(//epssodeyi podcast ile bağlamış
     tableName = "episodes",
     indices = [
         Index("uri", unique = true),

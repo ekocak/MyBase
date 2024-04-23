@@ -35,6 +35,7 @@ import com.ekremkocak.mybase.utilities.Constants.DATABASE_NAME
         Podcast::class,
         Episode::class,
         Category::class,
+
     ],
     version = 1,
     exportSchema = false

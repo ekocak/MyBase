@@ -18,6 +18,8 @@ package com.ekremkocak.mybase.di
 
 import android.content.Context
 import com.ekremkocak.mybase.data.room.AppDatabase
+import com.ekremkocak.mybase.data.room.CategoriesDao
+import com.ekremkocak.mybase.data.room.EpisodesDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -35,14 +37,14 @@ class DatabaseModule {
         return AppDatabase.getInstance(context)
     }
 
-    /*
+
     @Provides
-    fun providePlantDao(appDatabase: AppDatabase): PlantDao {
-        return appDatabase.plantDao()
+    fun providePlantDao(appDatabase: AppDatabase): CategoriesDao {
+        return appDatabase.categoriesDao()
     }
 
     @Provides
-    fun provideGardenPlantingDao(appDatabase: AppDatabase): GardenPlantingDao {
-        return appDatabase.gardenPlantingDao()
-    }*/
+    fun provideGardenPlantingDao(appDatabase: AppDatabase): EpisodesDao {
+        return appDatabase.episodesDao()
+    }
 }

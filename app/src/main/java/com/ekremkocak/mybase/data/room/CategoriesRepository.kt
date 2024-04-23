@@ -6,8 +6,8 @@ import javax.inject.Singleton
 
 @Singleton
 class CategoriesRepository @Inject constructor(
-    private val categoriesDao: CategoriesDao
-) {
+    private val categoriesDao: CategoriesDao,
+    ) {
 
     suspend fun addCategory(category: Category): Long {
         return when (val local = categoriesDao.getCategoryWithName(category.name)) {
@@ -17,5 +17,7 @@ class CategoriesRepository @Inject constructor(
     }
 
     fun getCategories(limit: Int) = categoriesDao.categoriesSortedByPodcastCount(limit)
+
+
 
 }
